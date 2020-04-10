@@ -20,7 +20,7 @@ resources:
 #    type: buildInfo 
 #    version:
 #      buildName: app
-#      buildNumber: 1
+#      buildNumber: 1 
   - name: distributionRule
     type: DistributionRule
     configuration:
