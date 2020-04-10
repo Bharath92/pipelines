@@ -254,6 +254,6 @@ pipelines:
             - export M2_HOME=/tmp/apache-maven-3.6.1/
             - popd
             - javac -version
-            - mvn --version
+            - mvn --version 
 
 
