@@ -14,7 +14,7 @@ resources:
   - name: dockerbuild_gitRepo
     type: GitRepo
     configuration:
-      path: bharath92/gitIssues
+      path: bharath92/gitIssues 
       gitProvider: bharath_github
 #  - name: buildInfo
 #    type: buildInfo 
