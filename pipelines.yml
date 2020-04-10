@@ -17,7 +17,7 @@ resources:
       path: bharath92/gitIssues
       gitProvider: bharath_github
 #  - name: buildInfo
-#    type: buildInfo
+#    type: buildInfo 
 #    version:
 #      buildName: app
 #      buildNumber: 1
