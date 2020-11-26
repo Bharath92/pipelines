@@ -41,7 +41,6 @@ pipelines:
             - name: step1
           inputResources:
             - name: git
-            - name: buildInfo
           outputResources:
             - name: buildInfoDup
         execution:
@@ -52,8 +51,6 @@ pipelines:
         configuration:
           runtime:
             type: host
-          inputSteps:
-            - name: step2
           inputResources:
             - name: git
             - name: buildInfoDup
