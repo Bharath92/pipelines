@@ -28,7 +28,7 @@ pipelines:
           runtime:
             type: host
           outputResources:
-            name: buildInfo
+            - name: buildInfo
         execution:
           onExecute:
             - sleep 2m
