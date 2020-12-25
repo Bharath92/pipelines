@@ -3,6 +3,7 @@ pipelines:
   - name: test
     steps:
       - name: trigger
+        type: Bash
         configuration:
           runtime:
             type: host
@@ -11,6 +12,7 @@ pipelines:
             - echo hi
       
       - name: step0
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -21,6 +23,7 @@ pipelines:
             - echo hi0
       
       - name: step1
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -31,6 +34,7 @@ pipelines:
             - echo hi1
       
       - name: step2
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -41,6 +45,7 @@ pipelines:
             - echo hi2
       
       - name: step3
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -51,6 +56,7 @@ pipelines:
             - echo hi3
       
       - name: step4
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -61,6 +67,7 @@ pipelines:
             - echo hi4
       
       - name: step5
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -71,6 +78,7 @@ pipelines:
             - echo hi5
       
       - name: step6
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -81,6 +89,7 @@ pipelines:
             - echo hi6
       
       - name: step7
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -91,6 +100,7 @@ pipelines:
             - echo hi7
       
       - name: step8
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -101,6 +111,7 @@ pipelines:
             - echo hi8
       
       - name: step9
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -111,6 +122,7 @@ pipelines:
             - echo hi9
       
       - name: step10
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -121,6 +133,7 @@ pipelines:
             - echo hi10
       
       - name: step11
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -131,6 +144,7 @@ pipelines:
             - echo hi11
       
       - name: step12
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -141,6 +155,7 @@ pipelines:
             - echo hi12
       
       - name: step13
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -151,6 +166,7 @@ pipelines:
             - echo hi13
       
       - name: step14
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -161,6 +177,7 @@ pipelines:
             - echo hi14
       
       - name: step15
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -171,6 +188,7 @@ pipelines:
             - echo hi15
       
       - name: step16
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -181,6 +199,7 @@ pipelines:
             - echo hi16
       
       - name: step17
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -191,6 +210,7 @@ pipelines:
             - echo hi17
       
       - name: step18
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -201,6 +221,7 @@ pipelines:
             - echo hi18
       
       - name: step19
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -211,6 +232,7 @@ pipelines:
             - echo hi19
       
       - name: step20
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -221,6 +243,7 @@ pipelines:
             - echo hi20
       
       - name: step21
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -231,6 +254,7 @@ pipelines:
             - echo hi21
       
       - name: step22
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -241,6 +265,7 @@ pipelines:
             - echo hi22
       
       - name: step23
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -251,6 +276,7 @@ pipelines:
             - echo hi23
       
       - name: step24
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -261,6 +287,7 @@ pipelines:
             - echo hi24
       
       - name: step25
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -271,6 +298,7 @@ pipelines:
             - echo hi25
       
       - name: step26
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -281,6 +309,7 @@ pipelines:
             - echo hi26
       
       - name: step27
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -291,6 +320,7 @@ pipelines:
             - echo hi27
       
       - name: step28
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -301,6 +331,7 @@ pipelines:
             - echo hi28
       
       - name: step29
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -311,6 +342,7 @@ pipelines:
             - echo hi29
       
       - name: step30
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -321,6 +353,7 @@ pipelines:
             - echo hi30
       
       - name: step31
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -331,6 +364,7 @@ pipelines:
             - echo hi31
       
       - name: step32
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -341,6 +375,7 @@ pipelines:
             - echo hi32
       
       - name: step33
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -351,6 +386,7 @@ pipelines:
             - echo hi33
       
       - name: step34
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -361,6 +397,7 @@ pipelines:
             - echo hi34
       
       - name: step35
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -371,6 +408,7 @@ pipelines:
             - echo hi35
       
       - name: step36
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -381,6 +419,7 @@ pipelines:
             - echo hi36
       
       - name: step37
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -391,6 +430,7 @@ pipelines:
             - echo hi37
       
       - name: step38
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -401,6 +441,7 @@ pipelines:
             - echo hi38
       
       - name: step39
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -411,6 +452,7 @@ pipelines:
             - echo hi39
       
       - name: step40
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -421,6 +463,7 @@ pipelines:
             - echo hi40
       
       - name: step41
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -431,6 +474,7 @@ pipelines:
             - echo hi41
       
       - name: step42
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -441,6 +485,7 @@ pipelines:
             - echo hi42
       
       - name: step43
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -451,6 +496,7 @@ pipelines:
             - echo hi43
       
       - name: step44
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -461,6 +507,7 @@ pipelines:
             - echo hi44
       
       - name: step45
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -471,6 +518,7 @@ pipelines:
             - echo hi45
       
       - name: step46
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -481,6 +529,7 @@ pipelines:
             - echo hi46
       
       - name: step47
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -491,6 +540,7 @@ pipelines:
             - echo hi47
       
       - name: step48
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -501,6 +551,7 @@ pipelines:
             - echo hi48
       
       - name: step49
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -511,6 +562,7 @@ pipelines:
             - echo hi49
       
       - name: step50
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -521,6 +573,7 @@ pipelines:
             - echo hi50
       
       - name: step51
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -531,6 +584,7 @@ pipelines:
             - echo hi51
       
       - name: step52
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -541,6 +595,7 @@ pipelines:
             - echo hi52
       
       - name: step53
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -551,6 +606,7 @@ pipelines:
             - echo hi53
       
       - name: step54
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -561,6 +617,7 @@ pipelines:
             - echo hi54
       
       - name: step55
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -571,6 +628,7 @@ pipelines:
             - echo hi55
       
       - name: step56
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -581,6 +639,7 @@ pipelines:
             - echo hi56
       
       - name: step57
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -591,6 +650,7 @@ pipelines:
             - echo hi57
       
       - name: step58
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -601,6 +661,7 @@ pipelines:
             - echo hi58
       
       - name: step59
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -611,6 +672,7 @@ pipelines:
             - echo hi59
       
       - name: step60
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -621,6 +683,7 @@ pipelines:
             - echo hi60
       
       - name: step61
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -631,6 +694,7 @@ pipelines:
             - echo hi61
       
       - name: step62
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -641,6 +705,7 @@ pipelines:
             - echo hi62
       
       - name: step63
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -651,6 +716,7 @@ pipelines:
             - echo hi63
       
       - name: step64
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -661,6 +727,7 @@ pipelines:
             - echo hi64
       
       - name: step65
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -671,6 +738,7 @@ pipelines:
             - echo hi65
       
       - name: step66
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -681,6 +749,7 @@ pipelines:
             - echo hi66
       
       - name: step67
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -691,6 +760,7 @@ pipelines:
             - echo hi67
       
       - name: step68
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -701,6 +771,7 @@ pipelines:
             - echo hi68
       
       - name: step69
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -711,6 +782,7 @@ pipelines:
             - echo hi69
       
       - name: step70
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -721,6 +793,7 @@ pipelines:
             - echo hi70
       
       - name: step71
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -731,6 +804,7 @@ pipelines:
             - echo hi71
       
       - name: step72
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -741,6 +815,7 @@ pipelines:
             - echo hi72
       
       - name: step73
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -751,6 +826,7 @@ pipelines:
             - echo hi73
       
       - name: step74
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -761,6 +837,7 @@ pipelines:
             - echo hi74
       
       - name: step75
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -771,6 +848,7 @@ pipelines:
             - echo hi75
       
       - name: step76
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -781,6 +859,7 @@ pipelines:
             - echo hi76
       
       - name: step77
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -791,6 +870,7 @@ pipelines:
             - echo hi77
       
       - name: step78
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -801,6 +881,7 @@ pipelines:
             - echo hi78
       
       - name: step79
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -811,6 +892,7 @@ pipelines:
             - echo hi79
       
       - name: step80
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -821,6 +903,7 @@ pipelines:
             - echo hi80
       
       - name: step81
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -831,6 +914,7 @@ pipelines:
             - echo hi81
       
       - name: step82
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -841,6 +925,7 @@ pipelines:
             - echo hi82
       
       - name: step83
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -851,6 +936,7 @@ pipelines:
             - echo hi83
       
       - name: step84
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -861,6 +947,7 @@ pipelines:
             - echo hi84
       
       - name: step85
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -871,6 +958,7 @@ pipelines:
             - echo hi85
       
       - name: step86
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -881,6 +969,7 @@ pipelines:
             - echo hi86
       
       - name: step87
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -891,6 +980,7 @@ pipelines:
             - echo hi87
       
       - name: step88
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -901,6 +991,7 @@ pipelines:
             - echo hi88
       
       - name: step89
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -911,6 +1002,7 @@ pipelines:
             - echo hi89
       
       - name: step90
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -921,6 +1013,7 @@ pipelines:
             - echo hi90
       
       - name: step91
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -931,6 +1024,7 @@ pipelines:
             - echo hi91
       
       - name: step92
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -941,6 +1035,7 @@ pipelines:
             - echo hi92
       
       - name: step93
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -951,6 +1046,7 @@ pipelines:
             - echo hi93
       
       - name: step94
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -961,6 +1057,7 @@ pipelines:
             - echo hi94
       
       - name: step95
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -971,6 +1068,7 @@ pipelines:
             - echo hi95
       
       - name: step96
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -981,6 +1079,7 @@ pipelines:
             - echo hi96
       
       - name: step97
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -991,6 +1090,7 @@ pipelines:
             - echo hi97
       
       - name: step98
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
@@ -1001,6 +1101,7 @@ pipelines:
             - echo hi98
       
       - name: step99
+        type: Bash
         configuration:
           inputSteps:
             - name: trigger
