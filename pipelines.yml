@@ -1,69 +1,1012 @@
-resources:
-  - name: git
-    type: GitRepo
-    configuration:
-      path: bharath92/sample-runSh
-      gitProvider: github
-      branches:
-        include: master 
-  - name: cron
-    type: CronTrigger
-    configuration:
-      interval: '*/2 * * *'
 
 pipelines:
-  - name: basic1
+  - name: test
     steps:
-      - name: basic
-        type: Bash
+      - name: trigger
         configuration:
-          inputResources:
-            - name: git
           runtime:
             type: host
         execution:
           onExecute:
-            - printenv
-            - echo lol
-            - add_pipeline_variables foo=bar
-            - echo loool
-            - sleep 10m
-      - name: basicps
-        type: PowerShell
+            - echo hi
+      
+      - name: step0
         configuration:
-          inputResources:
-            - name: git
+          inputSteps:
+            - name: trigger
           runtime:
             type: host
         execution:
           onExecute:
-            - echo loool
-#       - name: second
-#         type: DockerBuild
-#         configuration:
-#           runtime:
-#             type: host
-#           dockerFileLocation: .
-#           dockerFileName: Dockerfile
-#           dockerImageName: foo
-#           dockerImageTag: foo
-#           inputResources:
-#             - name: git
-#           inputSteps:
-#             - name: basic
-#       - name: third
-#         type: Bash
-#         configuration:
-#           #inputResources:
-#           #  - name: git
-#           inputSteps:
-#             - name: basic
-#             - name: second
-#           environmentVariables:
-#             foo: bar
-#           runtime:
-#             type: host
-#         execution:
-#           onExecute:
-#             - echo $foo
-          
+            - echo hi0
+      
+      - name: step1
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi1
+      
+      - name: step2
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi2
+      
+      - name: step3
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi3
+      
+      - name: step4
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi4
+      
+      - name: step5
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi5
+      
+      - name: step6
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi6
+      
+      - name: step7
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi7
+      
+      - name: step8
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi8
+      
+      - name: step9
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi9
+      
+      - name: step10
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi10
+      
+      - name: step11
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi11
+      
+      - name: step12
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi12
+      
+      - name: step13
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi13
+      
+      - name: step14
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi14
+      
+      - name: step15
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi15
+      
+      - name: step16
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi16
+      
+      - name: step17
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi17
+      
+      - name: step18
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi18
+      
+      - name: step19
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi19
+      
+      - name: step20
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi20
+      
+      - name: step21
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi21
+      
+      - name: step22
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi22
+      
+      - name: step23
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi23
+      
+      - name: step24
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi24
+      
+      - name: step25
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi25
+      
+      - name: step26
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi26
+      
+      - name: step27
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi27
+      
+      - name: step28
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi28
+      
+      - name: step29
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi29
+      
+      - name: step30
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi30
+      
+      - name: step31
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi31
+      
+      - name: step32
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi32
+      
+      - name: step33
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi33
+      
+      - name: step34
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi34
+      
+      - name: step35
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi35
+      
+      - name: step36
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi36
+      
+      - name: step37
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi37
+      
+      - name: step38
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi38
+      
+      - name: step39
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi39
+      
+      - name: step40
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi40
+      
+      - name: step41
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi41
+      
+      - name: step42
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi42
+      
+      - name: step43
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi43
+      
+      - name: step44
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi44
+      
+      - name: step45
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi45
+      
+      - name: step46
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi46
+      
+      - name: step47
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi47
+      
+      - name: step48
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi48
+      
+      - name: step49
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi49
+      
+      - name: step50
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi50
+      
+      - name: step51
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi51
+      
+      - name: step52
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi52
+      
+      - name: step53
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi53
+      
+      - name: step54
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi54
+      
+      - name: step55
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi55
+      
+      - name: step56
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi56
+      
+      - name: step57
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi57
+      
+      - name: step58
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi58
+      
+      - name: step59
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi59
+      
+      - name: step60
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi60
+      
+      - name: step61
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi61
+      
+      - name: step62
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi62
+      
+      - name: step63
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi63
+      
+      - name: step64
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi64
+      
+      - name: step65
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi65
+      
+      - name: step66
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi66
+      
+      - name: step67
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi67
+      
+      - name: step68
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi68
+      
+      - name: step69
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi69
+      
+      - name: step70
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi70
+      
+      - name: step71
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi71
+      
+      - name: step72
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi72
+      
+      - name: step73
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi73
+      
+      - name: step74
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi74
+      
+      - name: step75
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi75
+      
+      - name: step76
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi76
+      
+      - name: step77
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi77
+      
+      - name: step78
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi78
+      
+      - name: step79
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi79
+      
+      - name: step80
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi80
+      
+      - name: step81
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi81
+      
+      - name: step82
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi82
+      
+      - name: step83
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi83
+      
+      - name: step84
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi84
+      
+      - name: step85
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi85
+      
+      - name: step86
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi86
+      
+      - name: step87
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi87
+      
+      - name: step88
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi88
+      
+      - name: step89
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi89
+      
+      - name: step90
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi90
+      
+      - name: step91
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi91
+      
+      - name: step92
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi92
+      
+      - name: step93
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi93
+      
+      - name: step94
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi94
+      
+      - name: step95
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi95
+      
+      - name: step96
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi96
+      
+      - name: step97
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi97
+      
+      - name: step98
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi98
+      
+      - name: step99
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi99
+      
