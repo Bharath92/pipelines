@@ -1,22 +1,14 @@
-resources:
-  - name: git
-    type: GitRepo
-    configuration:
-      path: bharath92/sample-runSh
-      gitProvider: github
-      branches:
-        include: master 
-  - name: cron
-    type: CronTrigger
-    configuration:
-      interval: '*/2 * * *'
-
 pipelines:
   - name: basic1
     steps:
       - name: basic
-        type: Bash
+        type: Matrix
         configuration:
+          stepletMultipliers:
+            environmentVariables:
+              foo: bar
+              boo: foo
+          multiNode: true
           runtime:
             type: host
         execution:
@@ -25,61 +17,3 @@ pipelines:
             - echo lol
             - add_pipeline_variables foo=bar
             - echo loool
-      - name: basic2
-        type: Bash
-        configuration:
-          outputResources:
-            - name: cron
-          inputResources:
-            - name: git
-          inputSteps:
-            - name: basic
-          runtime:
-            type: host
-        execution:
-          onExecute:
-            - printenv
-            - write_output cron "foo=$run_number"
-            - save_tests /tmp/test.xml
-            - export resName=$(get_resource_name --type GitRepo --operation IN)
-            - echo $(find_resource_variable $resName path)
-        
-#       - name: basicps
-#         type: PowerShell
-#         configuration:
-#           inputResources:
-#             - name: git
-#           runtime:
-#             type: host
-#         execution:
-#           onExecute:
-#             - echo loool
-#       - name: second
-#         type: DockerBuild
-#         configuration:
-#           runtime:
-#             type: host
-#           dockerFileLocation: .
-#           dockerFileName: Dockerfile
-#           dockerImageName: foo
-#           dockerImageTag: foo
-#           inputResources:
-#             - name: git
-#           inputSteps:
-#             - name: basic
-#       - name: third
-#         type: Bash
-#         configuration:
-#           #inputResources:
-#           #  - name: git
-#           inputSteps:
-#             - name: basic
-#             - name: second
-#           environmentVariables:
-#             foo: bar
-#           runtime:
-#             type: host
-#         execution:
-#           onExecute:
-#             - echo $foo
-          
