@@ -5,8 +5,8 @@ pipelines:
         type: Matrix
         stepletMultipliers:
           environmentVariables:
-            foo: bar
-            boo: foo
+            - foo: bar
+            - boo: foo
         configuration:
           multiNode: true
           runtime:
