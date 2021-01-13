@@ -1,7 +1,7 @@
 pipelines:
-  - name: basic1
+  - name: matrix
     steps:
-      - name: basic
+      - name: matrix
         type: Matrix
         stepletMultipliers:
           environmentVariables:
