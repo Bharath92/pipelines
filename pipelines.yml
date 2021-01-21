@@ -12,50 +12,46 @@ resources:
       interval: '*/2 * * *'
 
 pipelines:
-  - name: basic1
+  - name: noagbasic1
     steps:
-      - name: basic
+      - name: noagbasic
         type: Bash
         configuration:
-          affinityGroup: foo
           runtime:
             type: host
         execution:
           onExecute:
             - sleep 2m
-      - name: basicparallel
+      - name: noagbasicparallel
         type: Bash
         configuration:
           inputSteps:
-            - name: basic
-          affinityGroup: foo
+            - name: noagbasic
           runtime:
             type: host
         execution:
           onExecute:
             - sleep 1m
-      - name: basic2
+      - name: noagbasic2
         type: Bash
         configuration:
-          affinityGroup: foo
           inputResources:
             - name: git
           inputSteps:
-            - name: basic
+            - name: noagbasic
           runtime:
             type: host
         execution:
           onExecute:
             - printenv
             - sleep 3m
-      - name: basic3
+      - name: noagbasic3
         type: Bash
         configuration:
-          affinityGroup: foo
           outputResources:
             - name: cron
           inputSteps:
-            - name: basic2
+            - name: noagbasic2
           runtime:
             type: host
         execution:
@@ -63,24 +59,22 @@ pipelines:
             - printenv
             - write_output cron "foo=$run_number"
             - sleep 1m
-      - name: basic4
+      - name: noagbasic4
         type: Bash
         configuration:
-          affinityGroup: foo
           inputSteps:
-            - name: basic3
+            - name: noagbasic3
           runtime:
             type: host
         execution:
           onExecute:
             - printenv
             - sleep 1m
-      - name: basic5
+      - name: noagbasic5
         type: Bash
         configuration:
-          affinityGroup: foo
           inputSteps:
-            - name: basic4
+            - name: noagbasic4
           runtime:
             type: host
         execution:
