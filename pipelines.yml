@@ -10,8 +10,8 @@ pipelines:
       - name: basic
         type: Bash
         configuration:
-          inputResources:
-            - name: cron
+#           inputResources:
+#             - name: cron
           runtime:
             type: host
         execution:
