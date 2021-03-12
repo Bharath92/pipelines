@@ -14,6 +14,24 @@
 pipelines:
   - name: basic1
     steps:
+      - name: prebasic
+        type: Bash
+        configuration:
+          affinityGroup: foo
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi
+      - name: prebasic2
+        type: Bash
+        configuration:
+          affinityGroup: foo
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi
       - name: basic
         type: Bash
         configuration:
@@ -42,6 +60,8 @@ pipelines:
 #             - name: git
           inputSteps:
             - name: basic
+            - name: prebasic
+            - name: prebasic2
           runtime:
             type: host
         execution:
