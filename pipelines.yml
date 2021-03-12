@@ -17,7 +17,6 @@ pipelines:
       - name: preprebasic
         type: Bash
         configuration:
-          affinityGroup: foo
           runtime:
             type: host
         execution:
