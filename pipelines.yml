@@ -50,7 +50,6 @@ pipelines:
       - name: basic
         type: Bash
         configuration:
-          affinityGroup: foo
           runtime:
             type: host
         execution:
