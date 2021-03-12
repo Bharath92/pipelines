@@ -69,6 +69,8 @@ pipelines:
           affinityGroup: foo
           inputSteps:
             - name: basic3
+            - name: basic2
+            - name: basic1
           runtime:
             type: host
         execution:
