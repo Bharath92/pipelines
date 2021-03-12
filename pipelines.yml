@@ -32,6 +32,13 @@ pipelines:
         execution:
           onExecute:
             - echo hi
+      - name: prebasic3
+        type: shippable/sampleStep
+        syntaxVersion: 1.1.1
+        configuration:
+          foo: foo
+          runtime:
+            type: host
       - name: basic
         type: Bash
         configuration:
