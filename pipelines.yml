@@ -105,12 +105,20 @@ pipelines:
             - name: basic3
             - name: basic2
             - name: basicparallel
+            - name: leafbasic
           runtime:
             type: host
         execution:
           onExecute:
             - printenv
-            - sleep 1m
+      - name: leafbasic
+        type: Bash
+        configuration:
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - printenv
 #       - name: basic5
 #         type: Bash
 #         configuration:
