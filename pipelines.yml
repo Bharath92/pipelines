@@ -106,6 +106,8 @@ pipelines:
             - name: basic2
             - name: basicparallel
             - name: leafbasic
+            - name: anotherleaf
+            - name: nonleafextension
           runtime:
             type: host
         execution:
@@ -119,6 +121,22 @@ pipelines:
         execution:
           onExecute:
             - printenv
+      - name: anotherleaf
+        type: shippable/sampleStep
+        syntaxVersion: 1.1.1
+        configuration:
+          foo: foo
+          runtime:
+            type: host
+      - name: nonleafextension
+        type: shippable/sampleStep
+        syntaxVersion: 1.1.2
+        configuration:
+          inputSteps:
+            - name: basic3
+          foo: foo
+          runtime:
+            type: host
 #       - name: basic5
 #         type: Bash
 #         configuration:
