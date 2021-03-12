@@ -132,6 +132,7 @@ pipelines:
         type: shippable/sampleStep
         syntaxVersion: 1.1.2
         configuration:
+          affinityGroup: foo
           inputSteps:
             - name: basic3
           foo: foo
