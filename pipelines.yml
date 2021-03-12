@@ -25,7 +25,6 @@ pipelines:
       - name: prebasic
         type: Bash
         configuration:
-          affinityGroup: foo
           inputSteps:
             - name: preprebasic
           runtime:
@@ -36,7 +35,6 @@ pipelines:
       - name: prebasic2
         type: Bash
         configuration:
-          affinityGroup: foo
           runtime:
             type: host
         execution:
