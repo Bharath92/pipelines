@@ -70,7 +70,7 @@ pipelines:
           inputSteps:
             - name: basic3
             - name: basic2
-            - name: basic1
+            - name: basicparallel
           runtime:
             type: host
         execution:
