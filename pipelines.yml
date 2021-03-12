@@ -1110,4 +1110,26 @@ pipelines:
         execution:
           onExecute:
             - echo hi99
+ 
+      - name: step100
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi100
+            
+      - name: step101
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: trigger
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi101
       
