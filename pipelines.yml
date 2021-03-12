@@ -69,6 +69,7 @@ pipelines:
             - name: basic
             - name: prebasic
             - name: prebasic2
+            - name: prebasic3
           runtime:
             type: host
         execution:
