@@ -70,7 +70,6 @@ pipelines:
       - name: basic2
         type: Bash
         configuration:
-          affinityGroup: foo
 #           inputResources:
 #             - name: git
           inputSteps:
