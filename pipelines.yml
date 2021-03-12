@@ -14,10 +14,21 @@
 pipelines:
   - name: basic1
     steps:
+      - name: preprebasic
+        type: Bash
+        configuration:
+          affinityGroup: foo
+          runtime:
+            type: host
+        execution:
+          onExecute:
+            - echo hi
       - name: prebasic
         type: Bash
         configuration:
           affinityGroup: foo
+          inputSteps:
+            - name: preprebasic
           runtime:
             type: host
         execution:
