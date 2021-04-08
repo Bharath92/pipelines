@@ -3,7 +3,7 @@ resources:
     type: CronTrigger
     configuration:
       interval: '*/5 * * * *'
-  - name: basicgit
+  - name: basicgit2
     type: GitRepo
     configuration:
       path: bharath92/sample-runSh
@@ -11,15 +11,15 @@ resources:
       branches:
         include: master
 pipelines:
-  - name: basic_git
+  - name: basic_git2
     steps:
-      - name: basic_git
+      - name: basic_git2
         type: Bash
         configuration:
           outputResources:
             - name: cron
           inputResources:
-            - name: basicgit
+            - name: basicgit2
           runtime:
             type: host
         execution:
