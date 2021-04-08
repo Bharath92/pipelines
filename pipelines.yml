@@ -10,13 +10,6 @@ resources:
       gitProvider: github
       branches:
         include: master
-   - name: basicgit3
-    type: GitRepo
-    configuration:
-      path: bharath92/pipelines
-      gitProvider: github
-      branches:
-        include: master
 pipelines:
   - name: basic_git2
     steps:
