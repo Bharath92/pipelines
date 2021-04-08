@@ -1,4 +1,8 @@
 resources:
+  - name: cron
+    type: CronTrigger
+    configuration:
+      interval: '*/5 * * * *'
   - name: basicgit
     type: GitRepo
     configuration:
@@ -12,6 +16,8 @@ pipelines:
       - name: basic_git
         type: Bash
         configuration:
+          outputResources:
+            - name: cron
           inputResources:
             - name: basicgit
           runtime:
@@ -19,3 +25,4 @@ pipelines:
         execution:
           onExecute:
             - echo hi
+            - write_output cron foo=$run_number
