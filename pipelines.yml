@@ -27,4 +27,4 @@ pipelines:
             - echo hi
             - write_output cron foo=$run_number
             - export x=$(find_resource_variable "cron" resourcePath)
-            - cat $x
+            - cat $x/cron.env
