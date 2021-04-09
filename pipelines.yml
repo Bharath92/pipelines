@@ -29,3 +29,6 @@ pipelines:
             - export x=$(find_resource_variable "cron" resourcePath)
             - echo "$x/cron.env"
             - cat $x/cron.env
+            - sleep 10
+            - sleep 10
+            - sleep 10
