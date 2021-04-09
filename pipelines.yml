@@ -18,5 +18,5 @@ pipelines:
         execution:
           onExecute:
             - echo $foo
-            - for (( k = 0; k < 5; ++k )); do   sleep $(( foo*k )); done
+            - for (( k = 0; k < 5; ++k )); do   echo $k; echo $foo; sleep $(( foo*k )); done
             - $bar
