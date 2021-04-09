@@ -1,58 +1,7 @@
-resources:
-  - name: test
-    type: qhode/testRes
-    syntaxVersion: 1.2.3
-    configuration:
-      test: 21
-      test2: 11
-      uddt:
-        bar: 11
-#   - name: git
-#     type: GitRepo
-#     configuration:
-#       path: bharath92/sample-runSh
-#       gitProvider: bharath_github
-#       branches:
-#         include: master
-
 pipelines:
-  - name: basic
+  - name: extensiontest
     steps:
-      - name: basic
-        type: Bash
+      - name: extensiontest
+        type: shippable/sampleStep
         configuration:
-          inputResources:
-            - name: test
-          runtime:
-            type: host
-        execution:
-          onExecute:
-            - printenv
-#       - name: second
-#         type: Bash
-#         configuration:
-#           #inputResources:
-#           #  - name: git
-#           environmentVariables:
-#             foo: bar
-#           runtime:
-#             type: host
-#         execution:
-#           onExecute:
-#             - echo $foo
-#       - name: third
-#         type: Bash
-#         configuration:
-#           #inputResources:
-#           #  - name: git
-#           inputSteps:
-#             - name: basic
-#             - name: second
-#           environmentVariables:
-#             foo: bar
-#           runtime:
-#             type: host
-#         execution:
-#           onExecute:
-#             - echo $foo
-          
+          foo: abc
