@@ -22,6 +22,11 @@ pipelines:
         execution:
           onExecute:
             - echo hi
+            - echo $run_id > foo
+            - add_pipeline_files foo foo
+            - add_run_files foo foo
+            - add_pipeline_variables test=$run_id
+            - add_run_variables test=$run_id
       - name: prebasic
         type: Bash
         configuration:
@@ -54,7 +59,7 @@ pipelines:
             type: host
         execution:
           onExecute:
-            - sleep 2m
+            - echo hi
       - name: basicparallel
         type: Bash
         configuration:
@@ -81,7 +86,7 @@ pipelines:
         execution:
           onExecute:
             - printenv
-            - sleep 3m
+            - echo hi
       - name: basic3
         type: Bash
         configuration:
@@ -96,7 +101,7 @@ pipelines:
           onExecute:
             - printenv
 #             - write_output cron "foo=$run_number"
-            - sleep 1m
+            - echo hi
       - name: basic4
         type: Bash
         configuration:
@@ -121,23 +126,23 @@ pipelines:
         execution:
           onExecute:
             - printenv
-      - name: anotherleaf
-        type: shippable/sampleStep
-        syntaxVersion: 1.1.1
-        configuration:
-          foo: foo
-          runtime:
-            type: host
-      - name: nonleafextension
-        type: shippable/sampleStep
-        syntaxVersion: 1.1.2
-        configuration:
-          affinityGroup: foo
-          inputSteps:
-            - name: basic3
-          foo: foo
-          runtime:
-            type: host
+#       - name: anotherleaf
+#         type: shippable/sampleStep
+#         syntaxVersion: 1.1.1
+#         configuration:
+#           foo: foo
+#           runtime:
+#             type: host
+#       - name: nonleafextension
+#         type: shippable/sampleStep
+#         syntaxVersion: 1.1.2
+#         configuration:
+#           affinityGroup: foo
+#           inputSteps:
+#             - name: basic3
+#           foo: foo
+#           runtime:
+#             type: host
 #       - name: basic5
 #         type: Bash
 #         configuration:
