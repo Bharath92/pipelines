@@ -110,7 +110,6 @@ pipelines:
             - name: basic2
             - name: basicparallel
             - name: leafbasic
-            - name: anotherleaf
             - name: nonleafextension
           runtime:
             type: host
