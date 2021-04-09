@@ -8,7 +8,7 @@ pipelines:
             - foo: 2
             - foo: 4
         configuration:
-          multiNode: true
+#           multiNode: true
           runtime:
             type: host
         execution:
