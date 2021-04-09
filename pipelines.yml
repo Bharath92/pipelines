@@ -1,3 +1,8 @@
+resources:
+  - name: extensionres
+    type: shippable/sampleResource
+    configuration:
+      resourceFoo: 1
 pipelines:
   - name: extensiontest
     steps:
@@ -5,3 +10,5 @@ pipelines:
         type: shippable/sampleStep
         configuration:
           foo: abc
+          inputResources:
+            - name: extensionres
