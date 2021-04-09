@@ -47,7 +47,6 @@ pipelines:
             - echo hi
       - name: prebasic3
         type: shippable/sampleStep
-        syntaxVersion: 1.1.1
         configuration:
           foo: foo
           runtime:
@@ -70,7 +69,7 @@ pipelines:
             type: host
         execution:
           onExecute:
-            - sleep 1m
+            - echo 1
       - name: basic2
         type: Bash
         configuration:
