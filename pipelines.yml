@@ -13,4 +13,4 @@ pipelines:
             type: host
         execution:
           onExecute:
-            - for (( k = 0; k < 20; ++k )); do   sleep $(( l*k )); done
+            - for (( k = 0; k < 20; ++k )); do   sleep $(( foo*k )); done
