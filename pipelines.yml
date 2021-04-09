@@ -5,15 +5,12 @@ pipelines:
         type: Matrix
         stepletMultipliers:
           environmentVariables:
-            - foo: bar
-            - boo: foo
+            - foo: 2
+            - foo: 4
         configuration:
           multiNode: true
           runtime:
             type: host
         execution:
           onExecute:
-            - printenv
-            - echo lol
-            - add_pipeline_variables foo=bar
-            - echo loool
+            - for (( k = 0; k < 20; ++k )); do   sleep $(( l*k )); done
