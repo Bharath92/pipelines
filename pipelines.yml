@@ -10,5 +10,7 @@ pipelines:
         type: shippable/sampleStep
         configuration:
           foo: abc
+          integrations:
+            - name: art
           inputResources:
             - name: extensionres
