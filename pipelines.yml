@@ -6,7 +6,9 @@ pipelines:
         stepletMultipliers:
           environmentVariables:
             - foo: 2
-            - foo: 4
+              bar: echo
+            - foo: 1
+              bar: abc
         configuration:
 #           multiNode: true
           runtime:
@@ -14,4 +16,5 @@ pipelines:
         execution:
           onExecute:
             - echo $foo
-            - for (( k = 0; k < 20; ++k )); do   sleep $(( foo*k )); done
+            - for (( k = 0; k < 5; ++k )); do   sleep $(( foo*k )); done
+            - $bar
