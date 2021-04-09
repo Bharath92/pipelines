@@ -4,6 +4,7 @@ pipelines:
       - name: matrix
         type: Matrix
         stepletMultipliers:
+          fastFail: true
           environmentVariables:
             - foo: 4
               bar: echo
