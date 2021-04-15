@@ -9,7 +9,11 @@ pipelines:
             - foo: 4
               bar: echo
             - foo: 1
+              bar: echo hi
+            - foo: 8
               bar: abc
+            - foo: 16
+              bar: echo boo
         configuration:
 #           multiNode: true
           runtime:
