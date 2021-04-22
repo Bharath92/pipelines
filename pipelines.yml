@@ -1,21 +1,11 @@
-resources:
-  - name: basicgit
-    type: GitRepo
-    configuration:
-      path: bharath92/sample-runSh
-      gitProvider: github
-      branches:
-        include: master
 pipelines:
-  - name: basic_git
+  - name: basic_sleep
     steps:
-      - name: basic_git
+      - name: basic_sleep
         type: Bash
         configuration:
-          inputResources:
-            - name: basicgit
           runtime:
             type: host
         execution:
           onExecute:
-            - echo hi
+            - sleep 2m
