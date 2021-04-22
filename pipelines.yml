@@ -1,11 +1,27 @@
 pipelines:
-  - name: basic_sleep
+  - name: basic_fast_fail
     steps:
-      - name: basic_sleep
-        type: Bash
-        configuration:
-          runtime:
-            type: host
+      - name: matrix_fast_fail
+        type: Matrix
+        stepMode: Bash
+        stepletMultipliers:
+          fastFail: true
+          environmentVariables:
+            - delay: 1
+              fail: 'true'
+            - delay: 10
+              fail: 'true'
+            - delay: 15
+              fail: 'false'
+            - delay: 20
+              fail: 'false' 
         execution:
+          onStart:
+            - sleep "$delay"
           onExecute:
-            - sleep 2m
+            - echo "I am on matrix step"
+            - |
+              [ $fail == 'false' ] 
+            - ls -l .
+
+
