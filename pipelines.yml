@@ -44,3 +44,6 @@ pipelines:
             - name: localart
           inputSteps:
             - name: podman_docker_build
+        execution:
+          onExecute:
+            - ln -s $(which podman) /usr/local/bin/docker
