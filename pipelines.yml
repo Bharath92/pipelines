@@ -1,21 +1,11 @@
 pipelines:
-  - name: basic_podman
+  - name: multibranch
     steps:
-      - name: basic_podman
+      - name: multibranch
         type: Bash
         configuration:
           runtime:      
-            type: image
-            image:
-              custom:
-                name: localhost/podmaninsideimage
-                tag: 0.0.2
-                autoPull: false
+            type: host
         execution:
           onExecute:
-            - alias
-            - docker info
-            - docker run alpine ls
-            - docker ps -a
-            - docker rm -fv $(docker ps -aq)
-            - docker ps -a
+            - echo hi
