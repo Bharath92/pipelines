@@ -10,6 +10,7 @@ pipelines:
               custom:
                 name: localhost/podmaninsideimage
                 tag: 0.0.1
+                autoPull: false
         execution:
           onExecute:
             - echo hi
