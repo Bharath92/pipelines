@@ -31,6 +31,13 @@ pipelines:
       - name: podman_docker_push
         type: DockerPush
         configuration:
+          runtime:      
+            type: image
+            image:
+              custom:
+                name: localhost/podmaninsideimage
+                tag: 0.0.2
+                autoPull: false
           affinityGroup: podman
           targetRepository: bharathdocker
           integrations:
