@@ -21,13 +21,14 @@ pipelines:
             - name: localart
           inputResources:
             - name: dockergit
-          runtime:      
-            type: image
-            image:
-              custom:
-                name: localhost/podmaninsideimage
-                tag: 0.0.2
-                autoPull: false
+          runtime:
+            type: host
+#             type: image
+#             image:
+#               custom:
+#                 name: localhost/podmaninsideimage
+#                 tag: 0.0.2
+#                 autoPull: false
       - name: podman_docker_push
         type: DockerPush
         configuration:
