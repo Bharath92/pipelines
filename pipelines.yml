@@ -1,9 +1,26 @@
+resources:
+  - name: dockergit
+    type: GitRepo
+    configuration:
+      path: bharath92/sample-runsh
+      gitProvider: github
+      branches:
+        include: master
 pipelines:
-  - name: basic_podman
+  - name: podman_docker
     steps:
-      - name: basic_podman
-        type: Bash
+      - name: podman_docker_build
+        type: DockerBuild
         configuration:
+          affinityGroup: podman
+          dockerFileLocation: .
+          dockerFileName: Dockerfile
+          dockerImageName: 192.168.50.4:8082/bharathdocker/test
+          dockerImageTag: ${run_number}
+          integrations:
+            - name: localart
+          inputResources:
+            - name: dockergit
           runtime:      
             type: image
             image:
@@ -11,28 +28,12 @@ pipelines:
                 name: localhost/podmaninsideimage
                 tag: 0.0.2
                 autoPull: false
-        execution:
-          onExecute:
-            - whoami
-            - alias
-            - docker info
-            - docker run alpine ls
-            - docker ps -a
-            - docker rm -fv $(docker ps -aq)
-            - docker ps -a
-      - name: second
-        type: Bash
+      - name: podman_docker_push
+        type: DockerPush
         configuration:
-          runtime:      
-            type: host
+          affinityGroup: podman
+          targetRepository: bharathdocker
+          integrations:
+            - name: localart
           inputSteps:
-            - name: basic_podman
-        execution:
-          onExecute:
-            - whoami
-            - docker info
-            - docker run alpine ls
-            - docker ps -a
-            - docker rm -fv $(docker ps -aq)
-            - docker ps -a
- 
+            - name: podman_docker_build 
