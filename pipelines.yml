@@ -20,3 +20,19 @@ pipelines:
             - docker ps -a
             - docker rm -fv $(docker ps -aq)
             - docker ps -a
+      - name: second
+        type: Bash
+        configuration:
+          runtime:      
+            type: host
+          inputSteps:
+            - name: basic_podman
+        execution:
+          onExecute:
+            - whoami
+            - docker info
+            - docker run alpine ls
+            - docker ps -a
+            - docker rm -fv $(docker ps -aq)
+            - docker ps -a
+ 
