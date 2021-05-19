@@ -15,7 +15,7 @@ pipelines:
           affinityGroup: podman
           dockerFileLocation: .
           dockerFileName: Dockerfile
-          dockerImageName: 192.168.50.4:8082/bharathdocker/test
+          dockerImageName: 9f89d5e3528a.ngrok.io/bharathdocker/test
           dockerImageTag: ${run_number}
           integrations:
             - name: localart
@@ -43,7 +43,4 @@ pipelines:
           integrations:
             - name: localart
           inputSteps:
-            - name: podman_docker_build 
-#         execution:
-#           onStart:
-#             - ln -s $(which podman) /usr/local/bin/docker
+            - name: podman_docker_build
