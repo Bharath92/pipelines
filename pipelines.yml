@@ -9,7 +9,7 @@ pipelines:
             image:
               custom:
                 name: localhost/podmaninsideimage
-                tag: 1
+                tag: 1.0
         execution:
           onExecute:
             - echo hi
