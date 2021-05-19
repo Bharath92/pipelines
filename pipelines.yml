@@ -13,4 +13,4 @@ pipelines:
                 autoPull: false
         execution:
           onExecute:
-            - echo hi
+            - docker info
