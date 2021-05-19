@@ -32,12 +32,7 @@ pipelines:
         type: DockerPush
         configuration:
           runtime:      
-            type: image
-            image:
-              custom:
-                name: localhost/podmaninsideimage
-                tag: 0.0.2
-                autoPull: false
+            type: host
           affinityGroup: podman
           targetRepository: bharathdocker
           integrations:
