@@ -13,5 +13,6 @@ pipelines:
                 autoPull: false
         execution:
           onExecute:
+            - alias
             - docker info
             - docker run alpine ls
