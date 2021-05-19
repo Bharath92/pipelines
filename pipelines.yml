@@ -45,5 +45,5 @@ pipelines:
           inputSteps:
             - name: podman_docker_build
         execution:
-          onExecute:
+          onStart:
             - ln -s $(which podman) /usr/local/bin/docker
