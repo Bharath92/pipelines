@@ -1,5 +1,5 @@
 resources:
-  - name: cron
+  - name: cron2
     type: CronTrigger
     configuration:
       interval: '*/2 * * *'
@@ -10,17 +10,17 @@ pipelines:
         type: Bash
         configuration:
           outputResources:
-            - name: cron
+            - name: cron2
           runtime:
             type: host
         execution:
           onExecute:
-            - write_output cron "foo=$run_number"
+            - write_output cron2 "foo=$run_number"
       - name: version_test_2
         type: Bash
         configuration:
           inputResources:
-            - name: cron
+            - name: cron2
           runtime:
             type: host
         execution:
