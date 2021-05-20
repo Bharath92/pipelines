@@ -40,6 +40,6 @@ pipelines:
             - name: localart
           inputSteps:
             - name: podman_docker_build
-        execution:
-          onStart:
-            - ln -s $(which podman) /usr/local/bin/docker # this is required because jfrog rt docker-push needs a docker binary to be present in $PATH to work
+#         execution:
+#           onStart:
+#             - ln -s $(which podman) /usr/local/bin/docker # this is required because jfrog rt docker-push needs a docker binary to be present in $PATH to work
