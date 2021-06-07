@@ -14,8 +14,6 @@ pipelines:
         configuration:
           inputResources:
             - name: basicgit
-          runtime:
-            type: host
         execution:
           onExecute:
             - echo hiii
