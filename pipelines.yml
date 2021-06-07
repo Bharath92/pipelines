@@ -12,6 +12,7 @@ pipelines:
       - name: basic_git
         type: Bash
         configuration:
+          nodePool: k8s
           inputResources:
             - name: basicgit
           runtime:
