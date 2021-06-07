@@ -14,10 +14,11 @@ pipelines:
         configuration:
           runtime:
             type: image
-            custom:
-              name: releases-docker.jfrog.io/jfrog/pipelines-u18node
-              tag: 12.18.2
-              options: "--privileged"
+            image:
+              custom:
+                name: releases-docker.jfrog.io/jfrog/pipelines-u18node
+                tag: 12.18.2
+                options: "--privileged"
           inputResources:
             - name: basicgit
         execution:
