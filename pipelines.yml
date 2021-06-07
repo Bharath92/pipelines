@@ -18,5 +18,5 @@ pipelines:
             type: host
         execution:
           onExecute:
-            - echo hii
+            - echo hiii
             - printenv
