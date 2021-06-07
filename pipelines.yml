@@ -21,8 +21,6 @@ pipelines:
             - name: localart
           inputResources:
             - name: dockergit
-          runtime:
-            type: host
 #             type: image
 #             image:
 #               custom:
@@ -32,8 +30,6 @@ pipelines:
       - name: podman_docker_push
         type: DockerPush
         configuration:
-          runtime:      
-            type: host
           affinityGroup: podman
           targetRepository: bharathdocker
           integrations:
