@@ -8,8 +8,6 @@ resources:
         include: master
 pipelines:
   - name: basic_git
-    configuration:
-      nodePool: k8s
     steps:
       - name: basic_git
         type: Bash
