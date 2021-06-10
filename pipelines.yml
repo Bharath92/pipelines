@@ -18,7 +18,7 @@ pipelines:
           affinityGroup: podman
           dockerFileLocation: .
           dockerFileName: Dockerfile
-          dockerImageName: pipe6080securitytesting.jfrog.info/bharathdocker/test
+          dockerImageName: benstein.jfrog.io/bharathdocker/test
           dockerImageTag: ${run_number}
           integrations:
             - name: localart
