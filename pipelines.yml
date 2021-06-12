@@ -19,7 +19,7 @@ pipelines:
         execution:
           onExecute:
             - echo hiii
-            - docker run --init --privileged -v /usr/local/bin/docker:/usr/bin/docker alpine ls
+            - docker run --init -v /usr/local/bin/docker:/usr/bin/docker alpine ls
             - docker run --init --privileged -v --memory 16526684160 /run/user/1000/docker.sock:/var/run/docker.sock alpine ls
             - docker run --init --privileged -v /var/opt/jfrog/pipelines/data/basic_git/workspace:/var/opt/jfrog/pipelines/data/basic_git/workspace alpine ls
             - printenv
