@@ -13,14 +13,12 @@ pipelines:
         type: Bash
         configuration:
           runtime:
-            type: host
+            type: image
           inputResources:
             - name: basicgit
         execution:
           onExecute:
             - echo hiii
-            - docker run --init -v /usr/local/bin/docker:/usr/bin/docker alpine ls
-            - docker run --init --privileged --memory 16526684160 -v /run/user/1000/docker.sock:/var/run/docker.sock alpine ls
-            - docker run --init --privileged -v /var/opt/jfrog/pipelines/data/basic_git/workspace:/var/opt/jfrog/pipelines/data/basic_git/workspace alpine ls
+            - curl http://10.70.30.120:8082/pipelines/api/v1
             - printenv
             - mkdir -p test && mount /dev/sdb test
