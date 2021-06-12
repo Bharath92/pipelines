@@ -14,11 +14,12 @@ pipelines:
         configuration:
           runtime:
             type: image
-          inputResources:
-            - name: basicgit
+#           inputResources:
+#             - name: basicgit
         execution:
           onExecute:
             - echo hiii
+            - touch $run_dir/foo
             - curl http://10.70.30.120:8082/pipelines/api/v1
             - printenv
             - mkdir -p test && mount /dev/sdb test
