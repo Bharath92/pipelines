@@ -19,6 +19,7 @@ pipelines:
         execution:
           onExecute:
             - echo hiii
+            - touch /tmp/foo
             - touch $run_dir/foo
             - curl http://10.70.30.120:8082/pipelines/api/v1
             - printenv
