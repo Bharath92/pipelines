@@ -13,12 +13,12 @@ pipelines:
         type: Bash
         configuration:
           runtime:
-            type: image
-            image:
-              custom:
-                name: bharath92/pipelines
-                tag: min
-                options: --privileged
+            type: host
+#             image:
+#               custom:
+#                 name: bharath92/pipelines
+#                 tag: min
+#                 options: --privileged
 #           inputResources:
 #             - name: basicgit
         execution:
@@ -26,6 +26,7 @@ pipelines:
             - echo hiii
             - ls -al $run_dir
             - ls -al $pipeline_workspace_dir
+            - lsblk
             - chown -R root:root $pipeline_workspace_dir/
             - chmod -R 0777 $run_dir
             - touch /tmp/foo
