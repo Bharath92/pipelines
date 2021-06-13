@@ -13,12 +13,12 @@ pipelines:
         type: Bash
         configuration:
           runtime:
-            type: host
-#             image:
-#               custom:
-#                 name: bharath92/pipelines
-#                 tag: min
-#                 options: --privileged
+            type: image
+            image:
+              custom:
+                name: bharath92/pipelines
+                tag: min
+                options: --device /var/opt/jfrog/pipelines
 #           inputResources:
 #             - name: basicgit
         execution:
