@@ -14,6 +14,10 @@ pipelines:
         configuration:
           runtime:
             type: image
+            image:
+              custom:
+                name: bharath92/pipelines
+                tag: min
 #           inputResources:
 #             - name: basicgit
         execution:
