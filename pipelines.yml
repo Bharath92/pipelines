@@ -25,6 +25,7 @@ pipelines:
             - echo hiii
             - ls -al $run_dir
             - ls -al $pipeline_workspace_dir
+            - chown -R root:root $pipeline_workspace_dir/
             - chmod -R 0777 $run_dir
             - touch /tmp/foo
             - touch $run_dir/foo
