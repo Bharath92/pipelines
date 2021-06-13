@@ -24,6 +24,7 @@ pipelines:
         execution:
           onExecute:
             - ls -la /var/opt/jfrog/pipelines
+            - touch  /var/opt/jfrog/pipelines/boo
             - echo hiii
             - ls -al $run_dir
             - ls -al $pipeline_workspace_dir
