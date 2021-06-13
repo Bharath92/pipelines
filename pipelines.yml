@@ -18,7 +18,7 @@ pipelines:
               custom:
                 name: bharath92/pipelines
                 tag: min
-                options: --mount /var/opt/jfrog/pipelines
+                options: --mount type=bind,source=/var/opt/jfrog/pipelines,target=/var/opt/jfrog/pipelines
 #           inputResources:
 #             - name: basicgit
         execution:
