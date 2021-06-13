@@ -23,6 +23,7 @@ pipelines:
 #             - name: basicgit
         execution:
           onExecute:
+            - ls -la /var/opt/jfrog/pipelines
             - echo hiii
             - ls -al $run_dir
             - ls -al $pipeline_workspace_dir
