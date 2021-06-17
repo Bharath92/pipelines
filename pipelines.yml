@@ -11,12 +11,18 @@ pipelines:
     steps:
       - name: ext1
         type: shippable/DockerBuild
+        execution:
+          onSuccess:
+            - echo yeah
         configuration:
           foo: aaaa
           inputResources:
             - name: extgit
       - name: ext2
         type: drydock/DockerPush
+        execution:
+          onSuccess:
+            - echo yeah
         configuration:
           foo: bharathdocker
           inputResources:
