@@ -1,5 +1,5 @@
 resources:
-  - name: dockergit
+  - name: extgit
     type: GitRepo
     configuration:
       path: bharath92/sample-runsh
@@ -7,38 +7,17 @@ resources:
       branches:
         include: master
 pipelines:
-  - name: podman_docker
+  - name: exttest
     steps:
-      - name: podman_docker_build
-        type: DockerBuild
-#         execution:
-#           onStart:
-#             - ls # this is required because jfrog rt docker-push needs a docker binary to be present in $PATH to work
+      - name: ext1
+        type: shippable/DockerBuild
         configuration:
-          affinityGroup: podman
-          dockerFileLocation: .
-          dockerFileName: Dockerfile
-          dockerImageName: ddddc267430c.ngrok.io/bharathdocker/test
-          dockerImageTag: ${run_number}
-          integrations:
-            - name: localart
+          foo: aaaa
           inputResources:
-            - name: dockergit
-#             type: image
-#             image:
-#               custom:
-#                 name: localhost/podmaninsideimage
-#                 tag: 0.0.2
-#                 autoPull: false
-      - name: podman_docker_push
-        type: DockerPush
+            - name: extgit
+      - name: ext2
+        type: drydock/DockerPush
         configuration:
-          affinityGroup: podman
-          targetRepository: bharathdocker
-          integrations:
-            - name: localart
-          inputSteps:
-            - name: podman_docker_build
-#         execution:
-#           onStart:
-#             - ls # this is required because jfrog rt docker-push needs a docker binary to be present in $PATH to work
+          foo: bharathdocker
+          inputResources:
+            - name: extgit
