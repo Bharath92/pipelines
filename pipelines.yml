@@ -23,7 +23,6 @@ pipelines:
 #             - name: basicgit
         execution:
           onExecute:
-            - sleep 10m
             - ls -la /var/opt/jfrog/pipelines
             - touch  /var/opt/jfrog/pipelines/boo
             - echo hiii
