@@ -15,6 +15,7 @@ pipelines:
           onStart:
             - ls # this is required because jfrog rt docker-push needs a docker binary to be present in $PATH to work
         configuration:
+          nodePool: k8s
           affinityGroup: podman
           dockerFileLocation: .
           dockerFileName: Dockerfile
@@ -33,6 +34,7 @@ pipelines:
       - name: podman_docker_push
         type: DockerPush
         configuration:
+          nodePool: k8s
           affinityGroup: podman
           targetRepository: bharathdocker
           integrations:
