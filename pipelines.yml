@@ -14,12 +14,12 @@ pipelines:
         configuration:
           nodePool: k8s
           runtime:
-            type: host
-#             type: image
-#             image:
-#               custom:
-#                 name: bharath92/pipelines
-#                 tag: min
+#             type: host
+            type: image
+            image:
+              custom:
+                name: bharath92/pipelines
+                tag: min
 #                 options: -u nobody|65534
 #           inputResources:
 #             - name: basicgit
