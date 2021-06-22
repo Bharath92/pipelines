@@ -12,7 +12,6 @@ pipelines:
       - name: basic_git
         type: Bash
         configuration:
-          nodePool: k8s
           runtime:
 #             type: host
             type: image
