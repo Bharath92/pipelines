@@ -1,3 +1,8 @@
+start: &start
+  - echo start
+  - echo 1
+  - echo 2
+
 resources:
   - name: basicgit
     type: GitRepo
@@ -23,6 +28,7 @@ pipelines:
 #           inputResources:
 #             - name: basicgit
         execution:
+          onStart: *start
           onExecute:
             - ls -la /var/opt/jfrog/pipelines
             - touch  /var/opt/jfrog/pipelines/boo
