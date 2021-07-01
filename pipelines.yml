@@ -36,6 +36,7 @@ pipelines:
             - ls -al $run_dir
             - ls -al $pipeline_workspace_dir
             - lsblk
+            - chown -R rootless:rootless $run_dir
 #             - chown -R 1000:1000 $pipeline_workspace_dir/
 #             - chmod -R 0777 $run_dir
             - touch /tmp/foo
