@@ -24,7 +24,6 @@ pipelines:
               custom:
                 name: bharath92/pipelines
                 tag: min
-                options: '-v $run_dir:$run_dir:z,rw'
 #                 options: -u nobody|65534
 #           inputResources:
 #             - name: basicgit
