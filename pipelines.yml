@@ -20,10 +20,10 @@ pipelines:
           runtime:
 #             type: host
             type: image
-#             image:
-#               custom:
-#                 name: bharath92/pipelines
-#                 tag: min
+            image:
+              custom:
+                name: bharath92/pipelines
+                tag: min
 #                 options: -u nobody|65534
           inputResources:
             - name: basicgit
@@ -31,6 +31,7 @@ pipelines:
           onStart: *start
           onExecute:
             - echo $UID
+            - docker run alpine sh
 #             - sleep 2m
             - ls -la /var/opt/jfrog/pipelines
             - touch  /var/opt/jfrog/pipelines/boo
