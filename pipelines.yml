@@ -31,7 +31,7 @@ pipelines:
           onStart: *start
           onExecute:
             - echo $UID
-            - docker run alpine sh
+            - docker run alpine ls
 #             - sleep 2m
             - ls -la /var/opt/jfrog/pipelines
             - touch  /var/opt/jfrog/pipelines/boo
