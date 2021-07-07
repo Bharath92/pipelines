@@ -30,6 +30,7 @@ pipelines:
         execution:
           onStart: *start
           onExecute:
+            - echo $UID
             - ls -la /var/opt/jfrog/pipelines
             - touch  /var/opt/jfrog/pipelines/boo
             - echo hiii
