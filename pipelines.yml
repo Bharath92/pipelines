@@ -16,8 +16,8 @@ pipelines:
     steps:
       - name: basic_git
         type: Bash
-        configuration:
-          runtime:
+#         configuration:
+#           runtime:
 #             type: host
 #             type: image
 #             image:
