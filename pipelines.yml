@@ -24,13 +24,14 @@ pipelines:
               custom:
                 name: bharath92/pipelines
                 tag: min
-                options: --privileged
+#                 options: --privileged
 #           inputResources:
 #             - name: basicgit
         execution:
           onStart: *start
           onExecute:
             - echo $UID
+            - apk add bash
             - docker run --privileged alpine ls
 #             - sleep 2m
             - ls -la /var/opt/jfrog/pipelines
