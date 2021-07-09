@@ -19,7 +19,7 @@ pipelines:
           affinityGroup: podman
           dockerFileLocation: .
           dockerFileName: Dockerfile
-          dockerImageName: 2896801eff2d.ngrok.io/bharathdocker/test
+          dockerImageName: f61523dind2.jfrogdev.org/bharathdocker/test
           dockerImageTag: ${run_number}
           integrations:
             - name: localart
