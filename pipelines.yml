@@ -8,9 +8,9 @@ pipelines:
             type: image
             image:
               custom:
-                name: 042add4d7132.ngrok.io/drydock/pipelines-u16node
+                name: 042add4d7132.ngrok.io/bharathdocker/bharath92/pipelines
                 tag: master
-                sourceRepository: bharathdockervirtual
+                sourceRepository: bharathdocker
                 registry: localart
         execution:
           onExecute:
