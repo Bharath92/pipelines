@@ -9,7 +9,7 @@ pipelines:
             image:
               custom:
                 name: 042add4d7132.ngrok.io/bharathdocker/bharath92/pipelines
-                tag: master
+                tag: min
                 sourceRepository: bharathdocker
                 registry: localart
         execution:
