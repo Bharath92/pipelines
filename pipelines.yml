@@ -1,6 +1,6 @@
 start: &start
   - echo start
-  - echo 1
+  - echo 11
   - echo 2a
 
 resources:
