@@ -1,7 +1,7 @@
 start: &start
   - echo start
   - echo 11
-  - echo 2a
+  - echo 2a1
 
 resources:
   - name: basicgit
