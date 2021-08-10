@@ -12,9 +12,9 @@ resources:
       branches:
         include: master
 pipelines:
-  - name: test
+  - name: testaaaa
     steps:
-      - name: test
+      - name: testaaaa
         type: Bash
         execution:
           onExecute:
