@@ -21,7 +21,7 @@ pipelines:
 #             - echo $UID
   - name: basic_git
     steps:
-      - name: basic_git
+      - name: basic_git1
         type: Bash
         configuration:
           runtime:
