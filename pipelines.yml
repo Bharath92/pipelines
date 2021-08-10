@@ -16,7 +16,6 @@ pipelines:
     steps:
       - name: test
         type: Bash
-        configuration:
         execution:
           onExecute:
             - echo $UID
