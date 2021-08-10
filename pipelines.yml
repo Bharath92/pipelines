@@ -12,13 +12,13 @@ resources:
       branches:
         include: master
 pipelines:
-  - name: testaaaa
-    steps:
-      - name: testaaaa
-        type: Bash
-        execution:
-          onExecute:
-            - echo $UID
+#   - name: testaaaa
+#     steps:
+#       - name: testaaaa
+#         type: Bash
+#         execution:
+#           onExecute:
+#             - echo $UID
   - name: basic_git
     steps:
       - name: basic_git
