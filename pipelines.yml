@@ -11,44 +11,40 @@ resources:
       gitProvider: github
       branches:
         include: master
-pipelines:
-#   - name: testaaaa
+# pipelines:
+# #   - name: testaaaa
+# #     steps:
+# #       - name: testaaaa
+# #         type: Bash
+# #         execution:
+# #           onExecute:
+# #             - echo $UID
+#   - name: basic_git
 #     steps:
-#       - name: testaaaa
+#       - name: basic_git
 #         type: Bash
+#         configuration:
+#           runtime:
+# #             type: host
+#             type: image
+# #             image:
+# #               custom:
+# #                 name: bharath92/pipelines
+# #                 tag: min
+# #                 options: -e foo=bar
+#           inputResources:
+#             - name: basicgit
 #         execution:
+#           onStart: *start
 #           onExecute:
 #             - echo $UID
-  - name: basic_git
-    steps:
-      - name: basic_git
-        type: Bash
-        configuration:
-          runtime:
-#             type: host
-            type: image
-#             image:
-#               custom:
-#                 name: bharath92/pipelines
-#                 tag: min
-#                 options: -e foo=bar
-          inputResources:
-            - name: basicgit
-        execution:
-          onStart: *start
-          onExecute:
-            - echo $UID
-#             - docker run -v /var/run/docker.sock:/var/run/docker.sock -v /opt/docker/docker:/usr/bin/docker alpine sh -c "docker info"
-#             - sleep 2m
-            - ls -la /var/opt/jfrog/pipelines
-            - touch  /var/opt/jfrog/pipelines/boo
-            - echo hiii
-            - ls -al $run_dir
-            - ls -al $pipeline_workspace_dir
-            - lsblk
-#             - chown -R 1000:1000 $pipeline_workspace_dir/
-#             - chmod -R 0777 $run_dir
-            - touch /tmp/foo
-            - touch $run_dir/foo
-            - printenv
-            - mkdir -p test && mount /dev/sdb test
+#             - ls -la /var/opt/jfrog/pipelines
+#             - touch  /var/opt/jfrog/pipelines/boo
+#             - echo hiii
+#             - ls -al $run_dir
+#             - ls -al $pipeline_workspace_dir
+#             - lsblk
+#             - touch /tmp/foo
+#             - touch $run_dir/foo
+#             - printenv
+#             - mkdir -p test && mount /dev/sdb test
