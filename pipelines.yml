@@ -11,40 +11,40 @@ resources:
       gitProvider: github
       branches:
         include: master
-# pipelines:
-# #   - name: testaaaa
-# #     steps:
-# #       - name: testaaaa
-# #         type: Bash
-# #         execution:
-# #           onExecute:
-# #             - echo $UID
-#   - name: basic_git
+pipelines:
+#   - name: testaaaa
 #     steps:
-#       - name: basic_git
+#       - name: testaaaa
 #         type: Bash
-#         configuration:
-#           runtime:
-# #             type: host
-#             type: image
-# #             image:
-# #               custom:
-# #                 name: bharath92/pipelines
-# #                 tag: min
-# #                 options: -e foo=bar
-#           inputResources:
-#             - name: basicgit
 #         execution:
-#           onStart: *start
 #           onExecute:
 #             - echo $UID
-#             - ls -la /var/opt/jfrog/pipelines
-#             - touch  /var/opt/jfrog/pipelines/boo
-#             - echo hiii
-#             - ls -al $run_dir
-#             - ls -al $pipeline_workspace_dir
-#             - lsblk
-#             - touch /tmp/foo
-#             - touch $run_dir/foo
-#             - printenv
-#             - mkdir -p test && mount /dev/sdb test
+  - name: basic_git
+    steps:
+      - name: basic_git
+        type: Bash
+        configuration:
+          runtime:
+#             type: host
+            type: image
+#             image:
+#               custom:
+#                 name: bharath92/pipelines
+#                 tag: min
+#                 options: -e foo=bar
+          inputResources:
+            - name: basicgit
+        execution:
+          onStart: *start
+          onExecute:
+            - echo $UID
+            - ls -la /var/opt/jfrog/pipelines
+            - touch  /var/opt/jfrog/pipelines/boo
+            - echo hiii
+            - ls -al $run_dir
+            - ls -al $pipeline_workspace_dir
+            - lsblk
+            - touch /tmp/foo
+            - touch $run_dir/foo
+            - printenv
+            - mkdir -p test && mount /dev/sdb test
