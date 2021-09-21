@@ -39,7 +39,6 @@ resources:
       gitProvider: github
       branches:
         include: master
-pipelines:
 #   - name: testaaaa
 #     steps:
 #       - name: testaaaa
