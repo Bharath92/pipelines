@@ -15,7 +15,8 @@ pipelines:
           environmentVariables:
             {{ range $i, $e := until 100 }}
             - foo: "bar{{$i}}"
+              x: {{$i}}
             {{ end }}
         execution:
           onExecute:
-            - echo hi
+            - if [ $(($x % 10)) -eq 0 ]; then; echo lol; fi
