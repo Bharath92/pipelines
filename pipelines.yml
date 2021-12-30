@@ -19,4 +19,7 @@ pipelines:
             {{ end }}
         execution:
           onExecute:
-            - if [ $(($x % 10)) -eq 0 ]; then; curl https://norvig.com/big.txt; fi
+            - |
+              if [ $(($x % 10)) -eq 0 ]; then
+                curl https://norvig.com/big.txt
+              fi
