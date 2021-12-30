@@ -1,50 +1,21 @@
-  pipelines:
-  - name: pipeline_automation
+template: true
+valuesFilePath: ./values.yml
+
+pipelines:
+  - name: testcron
     steps:
-      - name: S_Bash_0032
-        type: Bash
-        execution:
-          onExecute:
-            - image_name=$step_image_name:$step_image_tag
-            - echo "image_name --> $image_name"
-            - |
-              [[ "$image_name" == "docker.bintray.io/jfrog/pipelines-u16node:12.18.2" ]]
-            - node --version
-            - |
-              [[ "$(node --version)" == *"12.18.2"* ]]
-
-  - name: M_S_Matrix_MN_008
-    steps:
-
-      - name: M_S_Matrix_MN_008_001
-        type: Bash
-        execution:
-          onStart:
-            - echo "Step is running"
-
-      - name: M_S_Matrix_MN_008_002
+      - name: basic
         type: Matrix
         stepMode: Bash
         configuration:
-          inputSteps:
-            - name: M_S_Matrix_MN_008_001
+          runtime:
+            type: host
           multiNode: true
         stepletMultipliers:
           environmentVariables:
-            - foo: "foo"
-            - foo: "bar"
-            - foo: "baz"
-        execution:
-          onStart:
-            - set_step_var "steplet_info" "Executed matrix steplet - ${steplet_id} on node id - ${step_node_id}"
-          onExecute:
-            - echo "$steplet_info"
-
-      - name: M_S_Matrix_MN_008_003
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: M_S_Matrix_MN_008_002
+            {{ range $i, $e := until 100 }}
+            - foo: "bar{{$i}}"
+            {{ end }}
         execution:
           onExecute:
-            - get_step_var "M_S_Matrix_MN_008_002" "steplet_info"
+            - echo hi
