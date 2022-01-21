@@ -1,11 +1,12 @@
-name: test
-steps:
-  - name: test
-    type: PowerShell
-    configuration:
-      nodePool: win_2019
-      integrations:
-        - name: s_artifactory
-    execution:
-      onExecute:
-        - docker ps
+pipelines:
+  name: test
+  steps:
+    - name: test
+      type: PowerShell
+      configuration:
+        nodePool: win_2019
+        integrations:
+          - name: s_artifactory
+      execution:
+        onExecute:
+          - docker ps
