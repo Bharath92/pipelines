@@ -13,3 +13,4 @@ pipelines:
         execution:
           onExecute:
             - cleanup_jfrog_cli --server-name s_artifactory
+            - docker ps
