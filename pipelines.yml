@@ -9,6 +9,7 @@ pipelines:
           nodePool: win_2019
           integrations:
             - name: s_artifactory
+            - name: bgithub
         execution:
           onExecute:
             - docker ps 
