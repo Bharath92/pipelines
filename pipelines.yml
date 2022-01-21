@@ -12,5 +12,4 @@ pipelines:
             - name: bgithub
         execution:
           onExecute:
-            - docker ps 
             - cleanup_jfrog_cli --server-name s_artifactory
