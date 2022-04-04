@@ -3,9 +3,6 @@ pipelines:
     steps:
       - name: simple
         type: Bash
-        configuration:
-          runtime:
-            type: host
         execution:
           onExecute:
             - printenv
