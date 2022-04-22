@@ -1,4 +1,13 @@
 resources:
+  - name: test2
+    type: GitRepo
+    configuration:
+      path: bharath92/sample-runSh
+      gitProvider: github
+      pullRequestTargetBranches:
+        include: master
+      buildOn:
+        pullRequestCreate: true
   - name: test
     type: GitRepo
     configuration:
@@ -35,6 +44,18 @@ pipelines:
             type: host
           inputResources:
             - name: test
+        execution:
+          onExecute:
+            - echo foo
+      - name: basic2
+        type: Bash
+        configuration:
+          runtime:
+            type: host
+          inputSteps:
+            - name: basic
+          inputResources:
+            - name: test2
         execution:
           onExecute:
             - echo foo
