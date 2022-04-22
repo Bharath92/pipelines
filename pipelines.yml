@@ -5,7 +5,7 @@ resources:
       path: bharath92/sample-runSh
       gitProvider: github
       pullRequestTargetBranches:
-        include: master
+        include: temp
       buildOn:
         pullRequestCreate: true
   - name: test
