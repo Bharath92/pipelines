@@ -1,5 +1,5 @@
 resources:
-  - name: test
+  - name: branchInclExcl
     type: GitRepo
     configuration:
       path: bharath92/sample-runSh
@@ -7,12 +7,6 @@ resources:
       branches:
         include: master
         exclude: foo
-      tags:
-        include: moo
-        exclude: boo
-      files:
-        include: foo.yml
-        exclude: boo.yml
       pullRequestSourceBranches:
         include: abc
         exclude: def
@@ -23,8 +17,6 @@ resources:
         commit: true
         pullRequestCreate: true
         pullRequestClose: true
-        releaseCreate: true
-        tagCreate: true
 pipelines:
   - name: basic
     steps:
