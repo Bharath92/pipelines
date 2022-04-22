@@ -4,9 +4,9 @@ resources:
     configuration:
       path: bharath92/sample-runSh
       gitProvider: github
-      branches:
-        include: master
-        exclude: foo
+#       branches:
+#         include: master
+#         exclude: foo
       tags:
         include: moo*
         exclude: boo
