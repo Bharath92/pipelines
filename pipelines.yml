@@ -14,7 +14,7 @@ resources:
 #         include: foo.yml
 #         exclude: boo.yml
       pullRequestSourceBranches:
-        include: abc
+        include: master
         exclude: def
       pullRequestTargetBranches:
         include: qwerty
