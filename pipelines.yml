@@ -1,5 +1,5 @@
 resources:
-  - name: test2
+  - name: test3
     type: GitRepo
     configuration:
       path: bharath92/sample-runSh
@@ -55,7 +55,7 @@ pipelines:
           inputSteps:
             - name: basic
           inputResources:
-            - name: test2
+            - name: test3
         execution:
           onExecute:
             - echo foo
