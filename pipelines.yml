@@ -8,7 +8,7 @@ resources:
         include: master
         exclude: foo
       tags:
-        include: moo
+        include: moo*
         exclude: boo
       files:
         include: foo.yml
