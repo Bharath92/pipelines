@@ -10,15 +10,15 @@ resources:
       tags:
         include: moo*
         exclude: boo
-      files:
-        include: foo.yml
-        exclude: boo.yml
-#       pullRequestSourceBranches:
-#         include: abc
-#         exclude: def
-#       pullRequestTargetBranches:
-#         include: qwerty
-#         exclude: poiuy
+#       files:
+#         include: foo.yml
+#         exclude: boo.yml
+      pullRequestSourceBranches:
+        include: abc
+        exclude: def
+      pullRequestTargetBranches:
+        include: qwerty
+        exclude: poiuy
       buildOn:
         commit: true
         pullRequestCreate: true
