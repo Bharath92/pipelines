@@ -18,14 +18,14 @@ resources:
       gitProvider: github
       branches:
         include: master
-  - name: basicgit23
+  - name: basicgit234
     type: GitRepo
     configuration:
       path: bharath92/pipelines
       gitProvider: github
       branches:
         include: master
-  - name: basicgit23
+  - name: basicgit235
     type: GitRepo
     configuration:
       path: bharath92/test-repo
@@ -55,6 +55,8 @@ pipelines:
                 autoPull: true
           inputResources:
             - name: basicgit
+            - name: basicgit234
+            - name: basicgit235
         execution:
           onStart: *start
           onExecute:
@@ -74,7 +76,9 @@ pipelines:
           inputSteps:
             - name: basic_git
           inputResources:
-            - name: basicgit23
+            - name: basicgit
+            - name: basicgit234
+            - name: basicgit235
         execution:
           onStart:
             - git --version
