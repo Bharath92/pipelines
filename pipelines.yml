@@ -18,6 +18,20 @@ resources:
       gitProvider: github
       branches:
         include: master
+  - name: basicgit23
+    type: GitRepo
+    configuration:
+      path: bharath92/pipelines
+      gitProvider: github
+      branches:
+        include: master
+  - name: basicgit23
+    type: GitRepo
+    configuration:
+      path: bharath92/test-repo
+      gitProvider: github
+      branches:
+        include: master
 #       cloneProtocol: https
 pipelines:
 #   - name: testaaaa
