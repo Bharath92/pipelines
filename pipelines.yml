@@ -47,7 +47,7 @@ pipelines:
           onStart:
             - git --version
             - git clone --progress --verbose https://github.com/Bharath92/pipelines.git
-     - name: basic_git_3
+      - name: basic_git_3
         type: Bash
         configuration:
           inputSteps:
