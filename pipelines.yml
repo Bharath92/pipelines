@@ -60,7 +60,7 @@ pipelines:
           inputSteps:
             - name: basic_git
           inputResources:
-            - name: basicgit2
+            - name: basicgit23
         execution:
           onStart:
             - git --version
