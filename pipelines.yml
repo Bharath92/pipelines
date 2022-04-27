@@ -38,4 +38,4 @@ pipelines:
         execution:
           onStart:
             - git --version
-            - git clone --progress --verbose git@github.com:Bharath92/test-repo.git
+            - git clone --progress --verbose https://github.com/Bharath92/pipelines.git
