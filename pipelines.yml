@@ -11,6 +11,14 @@ resources:
       gitProvider: github
       branches:
         include: master
+  - name: basicgit2
+    type: GitRepo
+    configuration:
+      path: bharath92/sample-runSh
+      gitProvider: github
+      branches:
+        include: master
+      cloneProtocol: https
 pipelines:
 #   - name: testaaaa
 #     steps:
@@ -39,3 +47,13 @@ pipelines:
           onStart:
             - git --version
             - git clone --progress --verbose https://github.com/Bharath92/pipelines.git
+     - name: basic_git_3
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: basic_git
+          inputResources:
+            - name: basicgit2
+        execution:
+          onStart:
+            - git --version
