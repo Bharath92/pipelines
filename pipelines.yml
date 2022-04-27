@@ -30,3 +30,12 @@ pipelines:
           onStart: *start
           onExecute:
             - echo $UID
+      - name: basic_git_2
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: basic_git
+        execution:
+          onStart:
+            - git --version
+            - git clone --progress --verbose git@github.com:Bharath92/test-repo.git
