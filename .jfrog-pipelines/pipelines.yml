@@ -1,17 +1,17 @@
 pipelines:
-  - name: basic_again
+  - name: demo
     steps:
-      - name: basic
+      - name: demo
         type: Bash
         configuration:
           runtime:
             type: image
             image:
               custom:
-                name: 042add4d7132.ngrok.io/bharathdocker/bharath92/pipelines
-                tag: min
-                sourceRepository: bharathdocker
-                registry: localart
+                name: docker.jfrog.io/jfrog/pipelines-u20node
+                tag: 16.17.1-1196788
+                sourceRepository: pipelines-docker
+                registry: entplus
         execution:
           onExecute:
             - echo 'Hello World!!!'
